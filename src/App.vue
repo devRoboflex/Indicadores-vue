@@ -1,20 +1,13 @@
 <template class="body">
-      <header>
-        <div class="menu">
-        <MenuComponent v-if="!$route.meta.hideMenu"></MenuComponent>
-    </div>
-      </header>
-    <br><br><br>
-    <div class="views">
+
         <router-view />
-    </div>
+
     <br><br><br>
     <FooterComponent></FooterComponent>
 </template>
 
 <script>
 import FooterComponent from "@/components/footer/FooterComponent"
-import MenuComponent from "./components/menu/MenuComponent.vue";
 export default {
     data() {
         return {
@@ -25,7 +18,6 @@ export default {
 
     components: {
         FooterComponent: FooterComponent,
-        MenuComponent: MenuComponent
     }
 }
 </script>
